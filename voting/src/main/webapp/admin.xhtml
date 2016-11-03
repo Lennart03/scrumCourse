@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:r="http://xmlns.jcp.org/jsf/composite/realdolmen"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Question customization</title>
+</head>
+<h:body>
+			<!--  <p:panelGrid columns="1" layout="grid">
+				<p:outputLabel>Questions ... </p:outputLabel>-->
+				<br />
+				<br />
+				<h:dataTable id="table1" value="#{questionsBean.questions}" var="quest"
+					style="margin-left:5px; margin-right:5px;">
+					<h:column headerText="Question" >
+						<h:outputText value="#{quest.questionText}" /><h:form><h:commandButton value="Remove"/></h:form>
+					</h:column>
+				</h:dataTable><!--  
+				<br />
+				<br />
+
+			</p:panelGrid>-->
+</h:body>
+</html>
