@@ -6,7 +6,7 @@ import java.util.List;
 public class Question {
 	
 	private String questionText;
-	private Double uestionValue;
+	private Double questionValue;
 	private List<Answer> answers = new ArrayList<Answer>();
 	
 	public String getQuestionText() {
@@ -21,14 +21,14 @@ public class Question {
 
 
 
-	public Double getUestionValue() {
-		return uestionValue;
+	public Double getQuestionValue() {
+		return questionValue;
 	}
 
 
 
 	public void setUestionValue(Double uestionValue) {
-		this.uestionValue = uestionValue;
+		this.questionValue = uestionValue;
 	}
 
 
@@ -42,7 +42,7 @@ public class Question {
 	public Question(String questionText, Double uestionValue) {
 		super();
 		this.questionText = questionText;
-		this.uestionValue = uestionValue;
+		this.questionValue = uestionValue;
 	}
 
 
