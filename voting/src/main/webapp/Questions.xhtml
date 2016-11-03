@@ -16,7 +16,7 @@
 
 	<h:form>
 
-		<h:dataTable value="#{questionsBean.question}" var="quest"
+		<h:dataTable value="#{questionsBean.questions}" var="quest"
 			id="questions">
 			<h:column>
 				<f:facet name="header">Role Name</f:facet>
@@ -26,14 +26,14 @@
 				<p:selectOneRadio id="questionRadio" value="#{questionsBean.user.addAnswer}">
 					<h:dataTable value="#{quest.answers}" var="ans" id="answers">
 						<h:column>
-							<f:selectItem itemLabel="#{ans}" itemValue="#{ans}" />
+							<f:selectItem itemLabel="#{ans.answerText}" itemValue="#{ans.candidate}" />
 						</h:column>
 					</h:dataTable>
 				</p:selectOneRadio>
 			</h:column>
 		</h:dataTable>
 
-		<p:commandButton value="Submit" action="#{questionsBean.user.getCandidateToVoteFor}"
+		<p:commandButton value="Submit" action="#{questionsBean.user.getCandidateToVoteFor()}"
 			icon="ui-icon-check" />
 	</h:form>
 
