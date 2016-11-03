@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:r="http://xmlns.jcp.org/jsf/composite/realdolmen">
+
+<h:head>
+	<title>Questions Election</title>
+</h:head>
+
+<h:body>
+	<h2>Fill in the following questions</h2>
+
+	<h:form>
+
+		<h:dataTable value="#{questionsBean.question}" var="quest"
+			id="questions">
+			<h:column>
+				<f:facet name="header">Role Name</f:facet>
+				<p:outputLabel value="#{quest.questionText}" />
+			</h:column>
+			<h:column>
+				<p:selectOneRadio id="questionRadio" value="#{questionsBean.user.addAnswer}">
+					<h:dataTable value="#{quest.answers}" var="ans" id="answers">
+						<h:column>
+							<f:selectItem itemLabel="#{ans}" itemValue="#{ans}" />
+						</h:column>
+					</h:dataTable>
+				</p:selectOneRadio>
+			</h:column>
+		</h:dataTable>
+
+		<p:commandButton value="Submit" action="#{questionsBean.user.getCandidateToVoteFor}"
+			icon="ui-icon-check" />
+	</h:form>
+
+</h:body>
+</html>
