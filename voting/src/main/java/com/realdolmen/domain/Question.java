@@ -13,31 +13,21 @@ public class Question {
 		return questionText;
 	}
 
-
-
 	public void setQuestionText(String questionText) {
 		this.questionText = questionText;
 	}
-
-
 
 	public Double getUestionValue() {
 		return uestionValue;
 	}
 
-
-
 	public void setUestionValue(Double uestionValue) {
 		this.uestionValue = uestionValue;
 	}
 
-
-
 	public Question() {
 		super();
 	}
-
-
 
 	public Question(String questionText, Double uestionValue) {
 		super();
@@ -45,13 +35,9 @@ public class Question {
 		this.uestionValue = uestionValue;
 	}
 
-
-
 	public List<Answer> getAnswers() {
 		return answers;
 	}
-
-
 
 	public void setAnswers(List<Answer> answers) {
 		this.answers = answers;
