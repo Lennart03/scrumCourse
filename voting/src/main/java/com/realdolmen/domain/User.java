@@ -54,6 +54,8 @@ public class User {
 			if (voteMap.containsKey(candidate)) {
 				Integer previeusScore = voteMap.get(candidate);
 				voteMap.put(candidate, previeusScore + 1);
+			} else {
+				voteMap.put(candidate, 0);
 			}
 		}
 		Integer maxScore = Integer.MIN_VALUE;
